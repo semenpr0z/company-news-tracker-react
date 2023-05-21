@@ -272,8 +272,9 @@ export const SearchForm = () => {
             customWidth="305"
             disabled={!isFormValid}
             type="submit"
+            pending={pending}
           >
-            Поиск {pending && <div className={css.pending}></div>}
+            Поиск
           </Button>
           <span className={css.text}>* Обязательные к заполнению поля</span>
         </div>

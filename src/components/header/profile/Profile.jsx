@@ -1,14 +1,16 @@
 import css from './Profile.module.scss'
 import { useDispatch } from "react-redux";
-import Cookies from "js-cookie";
 import { removeToken } from "@/store/actions";
+import { useNavigate } from "react-router-dom";
 
 export const Profile = () => {
+
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
     function logOut() {
         dispatch(removeToken());
-        
+        navigate("/");
     }
     return(
         <div className={css.profile}>

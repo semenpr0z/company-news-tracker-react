@@ -11,7 +11,8 @@ export const Button = (props) => {
     onClickFunction,
     path,
     customWidth,
-    textMini
+    textMini,
+    pending
   } = props;
   const navigate = useNavigate();
 
@@ -34,7 +35,7 @@ export const Button = (props) => {
       onClick={methodOnClick}
       style={{ width: customWidth ? `${customWidth}px` : `` }}
     >
-      {children}
+      {children} {pending && (<div className={css.pending}></div>)}
     </button>
   );
 };

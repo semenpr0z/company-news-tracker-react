@@ -20,7 +20,19 @@
     cursor: auto;
   }
 
-  
+  .pending {
+    height: 12px;
+    width: 12px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .blue {
@@ -41,9 +53,20 @@
   font-weight: 500;
   border: 2px solid #5970ff;
   box-sizing: border-box;
+
+  .pending {
+    border: 2px solid #ffffff;
+    border-top-color: transparent;
+  }
+
   &:hover {
     background-color: transparent;
     color: #5970ff;
+
+    .pending {
+      border: 2px solid #5970ff;
+      border-top-color: transparent;
+    }
   }
 }
 

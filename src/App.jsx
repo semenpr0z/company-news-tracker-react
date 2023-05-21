@@ -6,7 +6,7 @@ import Faq from "@/pages/Faq";
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/Footer";
 import { Auth } from "@/pages/Auth/Auth";
-import { useSelector } from "react-redux";
+import Cookies from "js-cookie";
 import { Search } from "@/pages/Search/Search";
 import { Results } from "@/pages/Results/Results";
 import { useEffect } from "react";
@@ -30,7 +30,7 @@ const pages = [
 ];
 
 function App() {
-  const token = useSelector((state) => state.token);
+  const token = Cookies.get("accessToken");
   const navigate = useNavigate();
 
   useEffect(() => {

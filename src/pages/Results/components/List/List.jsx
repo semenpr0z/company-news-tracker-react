@@ -62,8 +62,8 @@ export const List = (props) => {
       </div>
       {!fulledList && (
         <div className={css.btnWrapper} onClick={handleGetDocuments}>
-          <Button className={"darkBlue"} short={true}>
-            Показать больше {pending && (<div className={css.pending}></div>)}
+          <Button className={"darkBlue"} short={true} pending={pending}>
+            Показать больше
           </Button>
         </div>
       )}

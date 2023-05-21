@@ -14,11 +14,13 @@ export const AuthForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
+  const [pending, setStatusPending] = useState(false);
 
   const isFormValid = username && password;
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setStatusPending(true);
     if (!isFormValid) {
       return;
     }
@@ -28,6 +30,7 @@ export const AuthForm = () => {
       const { accessToken, expire } = response.data;
       Cookies.set("accessToken", accessToken, { expires: new Date(expire) });
       dispatch(setToken(accessToken));
+      setStatusPending(false);
       navigate("/");
     } catch (error) {
       console.log(error)
@@ -62,7 +65,7 @@ export const AuthForm = () => {
             />
             {error && <span className={css.error}>Неправильный пароль</span>}
           </label>
-          <Button className="darkBlue" disabled={!isFormValid} type="submit">
+          <Button className="darkBlue" disabled={!isFormValid} type="submit" pending={pending}>
             Войти
           </Button>
         </form>

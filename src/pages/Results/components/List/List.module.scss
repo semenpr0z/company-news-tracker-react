@@ -23,24 +23,10 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    .pending{
-      height: 12px;
-      width: 12px;
-      box-sizing: border-box;
-      border-radius: 50%;
-      border: 2px solid #db1a71;
-      border-top-color: transparent;
-      animation: spin 1s ease-in-out infinite;
-    }
+    
   }
 }
 
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 
 @media (max-width: 1050px) {
@@ -59,15 +45,6 @@
       width: auto;
       display: flex;
       flex-direction: column;
-      .pending{
-        height: 12px;
-        width: 12px;
-        box-sizing: border-box;
-        border-radius: 50%;
-        border: 2px solid #fff;
-        border-top-color: transparent;
-        animation: spin 1s ease-in-out infinite;
-      }
     }
   }
 }
