@@ -247,14 +247,6 @@
     .textInputs {
       width: 100%;
       label {
-        span {
-        }
-        .dates {
-          .wrapperDate {
-            img {
-            }
-          }
-        }
         input {
           max-width: 100%;
         }
@@ -263,17 +255,9 @@
         }
       }
       .wrapperDates {
-        span {
-        }
         .dates {
           flex-direction: column;
           gap: 20px;
-          .wrapperDate {
-            img {
-            }
-          }
-        }
-        input {
         }
       }
     }
@@ -282,20 +266,12 @@
       align-items: center;
       .checkboxes {
         display: none;
-        label {
-          .checkboxInput {
-          }
-          .checkboxLabel {
-          }
-        }
       }
       .button {
         width: 100%;
         align-items: center;
         button {
           width: 100% !important;
-        }
-        .text {
         }
       }
     }
