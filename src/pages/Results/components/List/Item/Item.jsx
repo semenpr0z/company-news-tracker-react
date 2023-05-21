@@ -11,6 +11,8 @@ export const Item = (props) => {
   ); //пытался распарсить как мог, но приходит ломаный html
   
 
+    //также приходит из бэкенда пустой url иногда
+
   const date = new Date(item.issueDate).toLocaleDateString();
   
   return (

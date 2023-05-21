@@ -34,6 +34,7 @@ export const AuthForm = () => {
       navigate("/");
     } catch (error) {
       console.log(error)
+      setStatusPending(false);
       setError(true);
     }
   };

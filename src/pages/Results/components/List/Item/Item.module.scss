@@ -74,6 +74,7 @@
 
 @media (max-width: 1050px) {
   .item {
+    width: 100%;
     max-width: 641px;
     margin: 0 auto;
     .dateAndSource {
@@ -88,6 +89,7 @@
         font-size: 19px;
         line-height: 23px;
         letter-spacing: 0.01em;
+        height: 67px;
       }
     }
     .type {
@@ -105,6 +107,15 @@
         font-size: 14px;
         line-height: 17px;
       }
+    }
+  }
+}
+
+@media (max-width: 690px) {
+  .item {
+    max-width: 100%;
+    .mainText {
+      max-width: 100%;
     }
   }
 }
