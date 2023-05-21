@@ -1,0 +1,27 @@
+.my-slider{
+    .slick-track{
+        display: flex;
+    }
+
+    .slick-prev{
+        left: -175px;
+    }
+
+    .slick-next{
+        right: -35px
+    }
+}
+
+
+@media (max-width: 490px) {
+    .my-slider{
+    
+        .slick-prev{
+            left: -35px;
+        }
+    
+        .slick-next{
+            right: -35px
+        }
+    }
+}

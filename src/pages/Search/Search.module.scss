@@ -1,0 +1,86 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 64px;
+  .searchFormWrapper {
+    margin-top: 69px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .document {
+      position: absolute;
+      right: -104px;
+      top: 50px;
+    }
+    .h1 {
+      font-family: "Ferry";
+      font-style: normal;
+      font-weight: 900;
+      font-size: 40px;
+      line-height: 48px;
+      letter-spacing: 0.03em;
+      max-width: 817px;
+    }
+    .p {
+      margin-top: 25px;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.02em;
+    }
+  }
+  .images {
+    width: 393px;
+    height: 671px;
+    background-image: url("/img/search-background.png");
+  }
+}
+
+@media (max-width: 1360px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+    .searchFormWrapper {
+      .document {
+        right: 0px;
+        top: 100px;
+      }
+    }
+    .images {
+      background-position: 0px -150px;
+      background-size: cover;
+      height: 455px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    .searchFormWrapper {
+      .document {
+        top: -70px;
+      }
+    }
+  }
+}
+
+
+@media (max-width: 400px) {
+  .wrapper {
+    .searchFormWrapper {
+      .document {
+        width: 58px;
+        height: 71px;
+        top: 90px;
+      }
+      .h1 {
+        font-size: 28px;
+        line-height: 34px;
+      }
+    }
+    .images {
+      width: 100%;
+    }
+  }
+}

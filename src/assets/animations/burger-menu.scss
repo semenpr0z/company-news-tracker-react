@@ -1,0 +1,24 @@
+
+  .header-expand-enter {
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+  }
+  
+  .header-expand-enter-active {
+    transform: scaleY(1);
+    opacity: 1;
+    transition: all 300ms ease-out;
+  }
+  
+  .header-expand-exit {
+    transform: scaleY(1);
+    transform-origin: top;
+    opacity: 1;
+  }
+  
+  .header-expand-exit-active {
+    transform: scaleY(0);
+    opacity: 0;
+    transition: all 300ms ease-out;
+  }

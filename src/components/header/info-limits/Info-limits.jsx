@@ -11,7 +11,7 @@ export const InfoLimits = (props) => {
                 <span className={css.spanThin}>Использовано компаний</span>
               </td>
               <td className={css.td}>
-                <span className={css.spanBold}>{props.limits.used}</span>
+                <span className={css.spanBold}>{props.limits.usedCompanyCount}</span>
               </td>
             </tr>
             <tr className={css.string}>
@@ -20,7 +20,7 @@ export const InfoLimits = (props) => {
               </td>
               <td className={css.td}>
                 <span className={[css.spanBold, css.green].join(" ")}>
-                  {props.limits.limit}
+                  {props.limits.companyLimit}
                 </span>
               </td>
             </tr>
@@ -29,12 +29,12 @@ export const InfoLimits = (props) => {
         <div className={css.infoMini}>
           <div className={css.textBlock}>
             <span className={css.spanThin}>Использовано компаний</span>
-            <span className={css.spanBold}>{props.limits.used}</span>
+            <span className={css.spanBold}>{props.limits.usedCompanyCount}</span>
           </div>
           <div className={css.textBlock}>
             <span className={css.spanThin}>Лимит по компаниям</span>
             <span className={[css.spanBold, css.green].join(" ")}>
-              {props.limits.limit}
+              {props.limits.companyLimit}
             </span>
           </div>
         </div>

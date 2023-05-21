@@ -1,0 +1,73 @@
+.wrapperList {
+  margin-top: 107px;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-family: "Ferry";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+  }
+  .itemsList {
+    margin: 58px 0 38px;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    width: 100%;
+    grid-row-gap: 38px;
+    grid-column-gap: 2%;
+  }
+  .btnWrapper{
+    margin-bottom: 109px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .pending{
+      height: 12px;
+      width: 12px;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: 2px solid #db1a71;
+      border-top-color: transparent;
+      animation: spin 1s ease-in-out infinite;
+    }
+  }
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1050px) {
+  .wrapperList {
+    .itemsList {
+      margin: 58px 0 38px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 38px;
+      width: 100%;
+  
+    }
+
+    .btnWrapper{
+      margin-bottom: 109px;
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      .pending{
+        height: 12px;
+        width: 12px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-top-color: transparent;
+        animation: spin 1s ease-in-out infinite;
+      }
+    }
+  }
+}

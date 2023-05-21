@@ -1,0 +1,296 @@
+.searchForm {
+  width: 100%;
+  max-width: 872px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 44px 32px;
+  margin-top: 47px;
+  box-sizing: border-box;
+  .textInputs {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 372px;
+    label {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+      span {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+      }
+      .error {
+        position: absolute;
+        bottom: -19px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        color: #ff5959;
+      }
+      .errorSpan {
+        color: #ff5959;
+      }
+      .dates {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .wrapperDate {
+          position: relative;
+          img {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+          }
+        }
+      }
+      input {
+        max-width: 65%;
+        box-sizing: border-box;
+        padding: 13px 15px;
+        border: 1px solid #c7c7c7;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        text-align: center;
+        color: #949494;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        transition: 0.4s ease;
+        &:focus {
+          outline: none;
+        }
+      }
+      .invalid {
+        border: 1px solid #ff5959;
+        box-shadow: 0px 0px 20px rgba(255, 89, 89, 0.2);
+      }
+      select {
+        appearance: none;
+        max-width: 65%;
+        box-sizing: border-box;
+        padding: 13px 15px;
+        border: 1px solid #c7c7c7;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        background-image: url("/svg/icon-arrow.svg");
+        background-repeat: no-repeat;
+        background-position: right 0.7em top 50%, 0 0;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+    .wrapperDates {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      .name {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.03em;
+        .errorSpan {
+          color: #ff5959;
+        }
+      }
+      .error {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.01em;
+        color: #ff5959;
+        position: absolute;
+        bottom: -19px;
+      }
+
+      .dates {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .wrapperDate {
+          position: relative;
+          img {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+          }
+          .invalid {
+            border: 1px solid #ff5959;
+            box-shadow: 0px 0px 20px rgba(255, 89, 89, 0.2);
+          }
+        }
+      }
+      input {
+        max-width: 65%;
+        box-sizing: border-box;
+        padding: 13px 15px;
+        border: 1px solid #c7c7c7;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+        border-radius: 5px;
+        text-align: center;
+        color: #949494;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+  .checkboxesAndBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 145px;
+    .checkboxes {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      label {
+        display: flex;
+        align-items: center;
+        gap: 17px;
+        .checkboxInput {
+          appearance: none;
+          min-width: 20px;
+          height: 20px;
+          border: 1px solid #000000;
+          outline: none;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          opacity: 0.4;
+          transition: 0.3s ease;
+        }
+        .checkboxInput:checked {
+          opacity: 1;
+        }
+
+        .checkboxInput:checked:before {
+          content: "";
+          display: inline-block;
+          background-image: url("/svg/icon-checkbox.svg/");
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 14px;
+          height: 14px;
+        }
+        .checkboxLabel {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.03em;
+          opacity: 0.4;
+          transition: 0.3s ease;
+        }
+        .checkboxInput:checked + .checkboxLabel {
+          opacity: 1;
+        }
+      }
+    }
+    .button {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: fit-content;
+      .pending {
+        height: 12px;
+        width: 12px;
+        box-sizing: border-box;
+        border-radius: 50%;
+        border: 2px solid #fff;
+        border-top-color: transparent;
+        animation: spin 1s ease-in-out infinite;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.03em;
+        color: #949494;
+      }
+    }
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 770px) {
+  .searchForm {
+    max-width: 100%;
+    flex-direction: column;
+    padding: 24px 26px;
+
+    .textInputs {
+      width: 100%;
+      label {
+        span {
+        }
+        .dates {
+          .wrapperDate {
+            img {
+            }
+          }
+        }
+        input {
+          max-width: 100%;
+        }
+        select {
+          max-width: 100%;
+        }
+      }
+      .wrapperDates {
+        span {
+        }
+        .dates {
+          flex-direction: column;
+          gap: 20px;
+          .wrapperDate {
+            img {
+            }
+          }
+        }
+        input {
+        }
+      }
+    }
+    .checkboxesAndBtn {
+      margin-top: 40px;
+      align-items: center;
+      .checkboxes {
+        display: none;
+        label {
+          .checkboxInput {
+          }
+          .checkboxLabel {
+          }
+        }
+      }
+      .button {
+        width: 100%;
+        align-items: center;
+        button {
+          width: 100% !important;
+        }
+        .text {
+        }
+      }
+    }
+  }
+}
